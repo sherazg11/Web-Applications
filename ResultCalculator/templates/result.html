@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+        <title>Result</title>
+    </head>
+    <body>
+        <h1>Your name is {{ name }} </h1>
+        <table>
+            {% for subject,marks in resultss.items() %}
+            <tr>
+                <th> {{ subject }} </th>
+                <th> {{ marks }} </th>
+              </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

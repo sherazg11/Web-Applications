@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+        <title>Enter Marks</title>
+    </head>
+    <body>
+        <form action="http://localhost:5000/marks" method="post">
+            <input name="name" type="text" placeholder="Enter Your Name: "><br>
+                {% for sub in fields %}
+                    <input type="text" name="subjectName{{ sub }}" placeholder="Enter Subject Name">
+                    <input type="text" name="marks{{sub}}" placeholder="Enter Marks"><br>
+                {% endfor %}
+                <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
